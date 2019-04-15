@@ -1,0 +1,50 @@
+
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+   
+        <h1 class="display-4" id="app-title">Awesome Burger
+        </h1>
+        <p class="lead">Welcome to Awesome Burger.</p>
+    </div>
+</div>
+    <div class="container">
+        <h1>Eat-Da-Burger</h1>
+       
+        <h2>Burger options:</h2>
+
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{>burgers/burger-block devour=true}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+        <h2>Burgers gone!</h2>
+
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{>burgers/burger-block devour=false}}
+            {{/if}}
+            {{/each}}
+        </ul>
+
+        <h2 id="order">Enter a burger below</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="burg">BURGER</label>
+                <input type="text" id="burg" name="burger_name">
+            </div>
+            <div class="form-group">
+                <label for="devoured" >HUNGRY?</label><br>
+                <input type="radio" name ="devoured" value="1" checked>  FULL NOW, SAVE FOR LATER<br>
+                <input type="radio" name ="devoured" value="0">  LET'S EAT!
+            </div>
+
+            <button class="btn btn-warning btn-lg" type="submit">Place your order</button>
+            <br>
+            <br>
+        </form>
+    </div>

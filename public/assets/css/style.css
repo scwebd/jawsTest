@@ -1,0 +1,32 @@
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+    /* width: 45%; */
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+    color:black;
+    font-size: 18px;
+    /* font-weight: bold; */
+  }
+h1, h2{
+    color: orange;
+}
+/* h2{
+  color: lightgray;
+} */
+#order{
+  color:black;
+}
